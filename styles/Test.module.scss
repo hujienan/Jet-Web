@@ -1,0 +1,28 @@
+.animate-text {
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #c9c9c9;
+  background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  
+  &::before {
+    animation: animate 6s linear infinite;
+
+    @keyframes animate {
+
+      0%,
+      10%,
+      100% {
+        width: 0;
+      }
+
+      70%,
+      90% {
+        width: 100%;
+      }
+    }
+  }
+}
