@@ -1,26 +1,50 @@
-.animate-text {
-  --gradient-color-1: #ef008f;
-  --gradient-color-2: #6ec3f4;
-  --gradient-color-3: #7038ff;
-  --gradient-color-4: #c9c9c9;
+.animate-text-1 {
+  --gradient-color-1: #7038ff;
+  --gradient-color-2: #ef008f;
   background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
   
   &::before {
-    animation: animate 6s linear infinite;
+    animation: animate1 5s linear infinite;
 
-    @keyframes animate {
+    @keyframes animate1 {
 
       0%,
       10%,
+      50%,
+      100% {
+        width: 0;
+      }
+
+      20%,
+      40% {
+        width: 100%;
+      }
+    }
+  }
+}
+.animate-text-2 {
+  --gradient-color-1: #7038ff;
+  --gradient-color-2: #ef008f;
+  background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  &::before {
+    animation: animate2 5s linear infinite;
+
+    @keyframes animate2 {
+
+      0%,
+      60%,
+      90%,
       100% {
         width: 0;
       }
 
       70%,
-      90% {
+      80% {
         width: 100%;
       }
     }
