@@ -12,7 +12,7 @@ export default function Home() {
         </meta>
       </Head>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_TRACKING_ID}`}
         strategy="afterInteractive"
       ></Script>
       <Script id="google-analytics" strategy="afterInteractive">
@@ -21,7 +21,7 @@ export default function Home() {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', ${process.env.TRACKING_ID});
+          gtag('config', '${process.env.NEXT_PUBLIC_TRACKING_ID}');
         `}
       </Script>
       <Heading></Heading>
